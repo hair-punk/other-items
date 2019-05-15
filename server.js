@@ -9,5 +9,5 @@ app.listen(port,(err) => {
     console.log(err);
     return;
   }
-  console.log(`Listening on port ${port}`);
+  console.log(`Listening on port ${port}. This is awesome`);
 });
