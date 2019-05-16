@@ -1,0 +1,40 @@
+.jjc-title{
+  color: hsl(0, 0%, 13%);
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.jjc-container{
+  font-size: 14px;
+  color:hsl(0, 0%, 13%);
+  text-align: left;
+  max-width: 1272px;
+  min-width: 972px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jjc-item{
+  width: 20%;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.jjc-item:hover > .jjc-image{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.jjc-image{
+  border-radius: 2px;
+  max-width: 179px;
+  max-height: 226px;
+}

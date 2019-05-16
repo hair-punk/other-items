@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Container from './Container.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -9,15 +9,18 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    //Get 5 items from database.
+  }
 
   render() {
     return (
       <div>
-        <h1>Team 2 FEC Project</h1>
+        <h1 className="jjc-title"> You may also like</h1>
+        <Container />
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('jjc-app'));
