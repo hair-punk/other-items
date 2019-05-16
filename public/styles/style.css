@@ -1,6 +1,8 @@
+#other-items{
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+}
 .jjc-title{
   color: hsl(0, 0%, 13%);
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
   text-align: center;
   padding-top: 30px;
   font-size: 20px;
@@ -12,8 +14,16 @@
   text-align: left;
   max-width: 1272px;
   min-width: 972px;
+  padding-left: 36px;
+  padding-right: 36px;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }
 
 .jjc-item{
@@ -24,6 +34,11 @@
   flex-basis: auto;
   display: inline-block;
   vertical-align: top;
+  padding: 9px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+
 }
 
 .jjc-item:hover > .jjc-image{
@@ -34,7 +49,63 @@
 }
 
 .jjc-image{
+  width: 100%;
   border-radius: 2px;
-  max-width: 179px;
-  max-height: 226px;
+}
+
+.jjc-itemTitle{
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.jjc-itemOwner{
+  display: inline-block;
+  color: #595959;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: normal;
+}
+
+.jjc-itemPrice{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: normal;
+  margin: 0;
+
+}
+
+.jjc-button-container{
+  margin-bottom: 36px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.jjc-button{
+  background-color: #222222;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #FFF;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  height: 38px;
+  line-height: 1.4;
+  padding: 8px 12px;
+}
+
+.jjc-button:hover{
+  background-color: #3c3c3c;
 }

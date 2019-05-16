@@ -15,9 +15,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="other-items">
         <h1 className="jjc-title"> You may also like</h1>
         <Container />
+        <div className="jjc-button-container">
+          <button className="jjc-button">Shop more similar items</button>
+        </div>
       </div>
     );
   }
