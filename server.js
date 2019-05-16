@@ -9,10 +9,14 @@ app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+app.get('/items',(req, res) => {
+  res.status(200).send(JSON.stringify({name: "jonathan"})).end();
+});
+
 app.listen(port,(err) => {
   if(err){
     console.log(err);
     return;
   }
-  console.log(`Listening on port ${port}. This is awesome.`);
+  console.log(`Listening on port ${port}:`);
 });

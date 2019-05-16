@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './Container.jsx';
+import axios from 'axios';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +13,13 @@ class App extends React.Component {
 
   componentDidMount() {
     //Get 5 items from database.
+    axios.get('http://localhost:3003/items')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   render() {
