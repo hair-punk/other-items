@@ -26,7 +26,6 @@ module.exports.fetch = (cb) => {
       }
       imageObj[results[i].imageUrl] = imageObj[results[i].imageUrl] + 1;
     }
-    console.log(imageObj);
     var limitedResults = [];
     for(var i = 1; i <= 15; i ++){
       limitedResults.push(results[Math.floor(Math.random() * 15)]);
