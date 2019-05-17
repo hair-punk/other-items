@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const db = require('./database/index.js');
 
 var app = express();
 var port = 3003;
@@ -10,7 +11,11 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/items',(req, res) => {
-  res.status(200).send(JSON.stringify({name: "jonathan"})).end();
+  db.fetch((err, results) => {
+    console.log('typeof', typeof results);
+    console.log(results);
+    res.status(200).send(JSON.stringify(results)).end();
+  });
 });
 
 app.listen(port,(err) => {
