@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    otherItems: null
+    otherItems: []
     }
   }
 
@@ -28,7 +28,7 @@ class App extends React.Component {
     return (
       <div id="other-items">
         <h1 className="jjc-title"> You may also like</h1>
-        <Container />
+        <Container items={this.state.otherItems} handleClick={this.clickItem.bind(this)}/>
         <div className="jjc-button-container">
           <button className="jjc-button">Shop more similar items</button>
         </div>

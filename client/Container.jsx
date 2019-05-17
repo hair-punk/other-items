@@ -1,23 +1,11 @@
 import React from 'react';
 import Item from './Item.jsx';
 
-var Container = (props) => (
+var Container = ({items}) => (
   <div className="jjc-container">
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
-    <Item />
+    {items.map((item, index) => {
+      return <Item key={index} item={item} />
+    })}
   </div>
 )
 
