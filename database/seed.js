@@ -7,7 +7,7 @@ db.Product.deleteMany((err) => {
       name: faker.commerce.productName(),
       owner: faker.company.companyName(),
       price: faker.commerce.price(),
-      imageUrl: faker.image.imageUrl()
+      imageUrl: `http://lorempixel.com/${Math.floor(Math.random() * 640) + 640}/${Math.floor(Math.random() * 480) + 480}`
     });
 
     product.save();
