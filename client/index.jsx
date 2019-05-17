@@ -13,11 +13,22 @@ class App extends React.Component {
 
   componentDidMount() {
     //Get 5 items from database.
+    this.fetchItems();
+  }
+
+  clickItem(){
+    this.fetchItems();
+  }
+
+  fetchItems(next){
     axios.get('http://localhost:3003/items')
       .then((res) => {
         this.setState({
           otherItems: res.data
         });
+        if(next){
+          next();
+        }
       })
       .catch((err) => {
         console.log(err);
