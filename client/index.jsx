@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    currentItem: null
+    otherItems: null
     }
   }
 
@@ -15,7 +15,9 @@ class App extends React.Component {
     //Get 5 items from database.
     axios.get('http://localhost:3003/items')
       .then((res) => {
-        console.log(res);
+        this.setState({
+          otherItems: res.data
+        });
       })
       .catch((err) => {
         console.log(err);
