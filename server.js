@@ -12,6 +12,7 @@ app.use(express.static('public'));
 
 app.get('/items',(req, res) => {
   db.fetch((err, results) => {
+    console.log(results);
     res.status(200).send(JSON.stringify(results)).end();
   });
 });
