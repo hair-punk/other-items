@@ -9,9 +9,12 @@ The Module contains 15 items, and each item corresponds of the following:
 
 ## Get Started
 1. Start your MongoDB database service
-  * You can use the command ``` sudo service mongodb start ``` to start the service.
+    * You can use the command ``` sudo service mongodb start ``` to start the service.
+
 2. Seed the Database with data
-  * In your terminal you can use the ``` npm run seed ``` script
+    * In your terminal you can use the ``` npm run seed ``` script
+
 3. Run the server
-  * Use the ``` npm start ``` script to start the server
+    * Use the ``` npm start ``` script to start the server
+
 4. Open your browser on localhost: 3003
