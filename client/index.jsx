@@ -23,6 +23,7 @@ class App extends React.Component {
   fetchItems(next){
     axios.get('http://localhost:3003/items')
       .then((res) => {
+        console.log(res.data);
         this.setState({
           otherItems: res.data
         });
