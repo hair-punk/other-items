@@ -16,10 +16,16 @@ app.get('/items',(req, res) => {
   });
 });
 
-app.listen(port,(err) => {
+app.use(function (req, res, next) {
+  res.status(404).send("Sorry can't find that!");
+});
+
+var server = app.listen(port,(err) => {
   if(err){
     console.log(err);
     return;
   }
   console.log(`Listening on port ${port}:`);
 });
+
+module.exports = server;
