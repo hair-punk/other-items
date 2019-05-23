@@ -34,7 +34,7 @@ const jjcItemTitleStyle = {
   whiteSpace: 'nowrap',
   fontSize: '14px',
   color: '#222',
-  fontWeight: '300',
+  fontWeight: '400',
   lineHeight: '1.6',
   letterSpacing: 'normal'
 };
@@ -81,7 +81,7 @@ class Item extends React.Component {
   render () {
     return (
       <div className="jjc-item" onClick={this.props.handleClick} style={jjcItemStyle} onMouseEnter={this.handleHover.bind(this)} onMouseLeave={this.handleUnhover.bind(this)}>
-        <img src={this.props.item.imageUrl} className="jjc-image" style={this.state.hovered ? jjcItemImageHoveredStyle : jjcItemImageStyle}/>
+        <img src={`data:image/jpeg;base64,${this.props.item.imageData}`} className="jjc-image" style={this.state.hovered ? jjcItemImageHoveredStyle : jjcItemImageStyle}/>
         <h2 className="jjc-itemTitle" style={jjcItemTitleStyle}>{this.props.item.name}</h2>
         <div className="jjc-itemOwner" style={jjcItemOwnerStyle}>{this.props.item.owner}</div>
         <h2 className="jjc-itemPrice" style={jjcItemPriceStyle}>${this.props.item.price}</h2>

@@ -7,12 +7,3 @@ seed.start((err) => {
   }
   console.log('Seeding process Completed');
 });
-
-
-
-
-
-
-
-
-
