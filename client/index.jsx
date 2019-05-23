@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import Container from './Container.jsx';
 import axios from 'axios';
 
+const otherItemsStyle = {
+  fontFamily: "Graphik Webfont,-apple-system,BlinkMacSystemFont,Roboto,Droid Sans,Segoe UI,Helvetica,Arial,sans-serif"
+}
+
+const jjcTitleStyle = {
+  color: '#212121',
+  textAlign: 'center',
+  paddingTop: '30px',
+  fontSize: '20px',
+  fontWeight: 'bold'
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -38,8 +50,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="other-items">
-        <h1 className="jjc-title"> You may also like</h1>
+      <div id="other-items" style={otherItemsStyle}>
+        <h1 className="jjc-title" style={jjcTitleStyle}> You may also like</h1>
         <Container items={this.state.otherItems} handleClick={this.clickItem.bind(this)}/>
         <div className="jjc-button-container">
           <button className="jjc-button">Shop more similar items</button>
