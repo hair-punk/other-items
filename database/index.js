@@ -24,7 +24,6 @@ module.exports.fetch = (cb) => {
     for(let i = 0; i <= 14; i ++){
       var newObj = {};
       Object.assign(newObj, results[randomIndex + i]._doc);
-      console.log("Results---->", newObj);
       newObj.imageData = results[randomIndex + i].imageData.toString('base64');
       limitedResults.push(newObj);
     }
