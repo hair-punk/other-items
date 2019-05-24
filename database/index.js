@@ -19,16 +19,14 @@ module.exports.fetch = (cb) => {
       cb(err, null);
       return;
     }
-    var imageObj = {};
-    for (var i = 0; i < results.length; i ++){
-      if(imageObj[results[i].imageUrl] === undefined){
-        imageObj[results[i].imageUrl] = 1;
-      }
-      imageObj[results[i].imageUrl] = imageObj[results[i].imageUrl] + 1;
-    }
     var limitedResults = [];
-    for(var i = 1; i <= 15; i ++){
-      limitedResults.push(results[Math.floor(Math.random() * 15)]);
+    var randomIndex = Math.floor(Math.random() * (results.length - 14));
+    for(let i = 0; i <= 14; i ++){
+      var newObj = {};
+      Object.assign(newObj, results[randomIndex + i]._doc);
+      console.log("Results---->", newObj);
+      newObj.imageData = results[randomIndex + i].imageData.toString('base64');
+      limitedResults.push(newObj);
     }
     cb(null, limitedResults);
   });
