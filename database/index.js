@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/products',{useNewUrlParser: true});
+var pass = 'TeQuieroMeli1'
+var uri = `mongodb+srv://root:${pass}@cluster0-lpse9.mongodb.net/products?retryWrites=true&w=majority`
+
+mongoose.connect(uri, {useNewUrlParser: true});
+
+// mongoose.connect('mongodb://localhost/products',{useNewUrlParser: true});
 
 var productsSchema = new mongoose.Schema({
   name: String,
@@ -11,6 +16,8 @@ var productsSchema = new mongoose.Schema({
 });
 
 var Product = mongoose.model('Product', productsSchema);
+
+
 
 module.exports.Product = Product;
 module.exports.fetch = (cb) => {
