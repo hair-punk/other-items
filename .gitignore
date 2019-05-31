@@ -3,3 +3,7 @@ etsy.js
 s3_helper.js
 credentials
 otherItems.zip
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
