@@ -14,7 +14,7 @@ const jjcItemStyle = {
 };
 
 const jjcItemImageStyle = {
-  height: '132px',
+  height: 'auto',
   width: '100%',
   borderRadius: '2px'
 };
@@ -22,7 +22,7 @@ const jjcItemImageStyle = {
 const jjcItemImageHoveredStyle = {
   boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.5)',
   transition: 'box-shadow 0.2s ease-in-out',
-  height: '132px',
+  height: 'auto',
   width: '100%',
   borderRadius: '2px'
 }
