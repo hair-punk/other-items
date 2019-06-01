@@ -77,7 +77,10 @@ class App extends React.Component {
 
   fetchItems(next) {
     console.log(`Fetching items from: http://127.0.0.1:8081/items`);
-    axios.get(`https://127.0.0.1:8081/items`)
+
+    axios.get(`http://127.0.0.1:8081/items`, {headers:{
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Accept': 'application/json'}})
       .then((res) => {
         console.log(res.data);
         this.setState({
