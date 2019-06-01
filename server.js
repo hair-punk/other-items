@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const db = require('./database/index.js');
 
 var app = express();
-var port = 3003;
+var port = process.env.port || 3003;
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
