@@ -76,8 +76,8 @@ class App extends React.Component {
   }
 
   fetchItems(next) {
-    console.log(`Fetching items from: ${process.env.HOST}:${port}/items`);
-    axios.get(`${host}:${port}/items`)
+    console.log(`Fetching items from: ${host}:${port}/items`);
+    axios.get(`http://${host}:${port}/items`)
       .then((res) => {
         console.log(res.data);
         this.setState({
