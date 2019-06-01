@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import Container from './Container.jsx';
 import axios from 'axios';
 
-const host = process.env.HOST || 'localhost';
-const port = process.env.PORT || 3003;
+// const host = process.env.HOST || 'localhost';
+// const port = process.env.PORT || 3003;
 
 const otherItemsStyle = {
   fontFamily: "Graphik Webfont,-apple-system,BlinkMacSystemFont,Roboto,Droid Sans,Segoe UI,Helvetica,Arial,sans-serif"
@@ -76,8 +76,8 @@ class App extends React.Component {
   }
 
   fetchItems(next) {
-    console.log(`Fetching items from: 127.0.0.1:${port}/items`);
-    axios.get(`http://127.0.0.1:${8081}/items`)
+    console.log(`Fetching items from: http://127.0.0.1:8081/items`);
+    axios.get(`http://127.0.0.1:8081/items`)
       .then((res) => {
         console.log(res.data);
         this.setState({
