@@ -30,7 +30,8 @@ var server = app.listen(port,(err) => {
     console.log(err);
     return;
   }
-  console.log('Testing 4: Hostname env variable', location.hostname);
+
+  console.log('Testing 5: Hostname env variable');
   console.log(`Listening on port ${port}:`);
 });
 
