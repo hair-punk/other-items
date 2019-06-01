@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Container from './Container.jsx';
 import axios from 'axios';
 
-// const host = process.env.HOST || 'localhost';
+const host = location.hostname || 'localhost';
 // const port = process.env.PORT || 3003;
 
 const otherItemsStyle = {
@@ -76,9 +76,9 @@ class App extends React.Component {
   }
 
   fetchItems(next) {
-    console.log(`Fetching items from: http://127.0.0.1:8081/items`);
+    console.log(`Fetching items from: http://${host}:8081/items`);
 
-    axios.get(`http://127.0.0.1:8081/items`, {headers:{
+    axios.get(`http://${host}/items`, {headers:{
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept': 'application/json'}})
       .then((res) => {
