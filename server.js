@@ -30,6 +30,7 @@ var server = app.listen(port,(err) => {
     console.log(err);
     return;
   }
+  console.log('Testing 1');
   console.log(`Listening on port ${port}:`);
 });
 
