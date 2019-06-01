@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import Container from './Container.jsx';
 import axios from 'axios';
 
+const port = process.env.PORT || 3003;
+
 const otherItemsStyle = {
   fontFamily: "Graphik Webfont,-apple-system,BlinkMacSystemFont,Roboto,Droid Sans,Segoe UI,Helvetica,Arial,sans-serif"
 };
@@ -64,6 +66,7 @@ class App extends React.Component {
 
   componentDidMount() {
     //Get 5 items from database.
+    console.log('Component Mounted');
     this.fetchItems();
   }
 
@@ -72,7 +75,8 @@ class App extends React.Component {
   }
 
   fetchItems(next) {
-    axios.get('http://localhost:3003/items')
+    console.log('Fetching items...');
+    axios.get(`http://localhost:${port}/items`)
       .then((res) => {
         console.log(res.data);
         this.setState({
