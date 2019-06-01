@@ -77,7 +77,7 @@ class App extends React.Component {
 
   fetchItems(next) {
     console.log(`Fetching items from: 127.0.0.1:${port}/items`);
-    axios.get(`http://127.0.0.1:${port}/items`)
+    axios.get(`http://127.0.0.1:${8081}/items`)
       .then((res) => {
         console.log(res.data);
         this.setState({
