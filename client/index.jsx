@@ -77,6 +77,7 @@ class App extends React.Component {
 
   fetchItems(next) {
     console.log(`Fetching items from: ${host}:${port}/items`);
+    console.log('Just checking if hostname is applicable:', process.env.HOSTNAME);
     axios.get(`http://${host}:${port}/items`)
       .then((res) => {
         console.log(res.data);
