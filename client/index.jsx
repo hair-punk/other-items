@@ -76,9 +76,24 @@ class App extends React.Component {
   }
 
   fetchItems(next) {
-    console.log(`Fetching items from: http://${host}:8081/items`);
+    console.log(`Fetching items from: http://${host}:3003/items`);
 
-    axios.get(`http://other-items-master.32xp9vpiyi.us-east-1.elasticbeanstalk.com/items`, {headers:{
+    // axios.get(`http://other-items-master.32xp9vpiyi.us-east-1.elasticbeanstalk.com/items`, {headers:{
+    //   'Content-Type': 'application/x-www-form-urlencoded',
+    //   'Accept': 'application/json'}})
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     this.setState({
+    //       otherItems: res.data
+    //     });
+    //     if(next){
+    //       next();
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    axios.get(`http://${host}:3003/items`, {headers:{
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept': 'application/json'}})
       .then((res) => {
