@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-
-var pass = 'TeQuieroMeli1'
-var uri = `mongodb+srv://root:${pass}@cluster0-lpse9.mongodb.net/products?retryWrites=true&w=majority`
+const atlas = require('./atlasHelper');
+var uri = `mongodb+srv://root:${atlas.pass}@cluster0-lpse9.mongodb.net/products?retryWrites=true&w=majority`
 
 mongoose.connect(uri, {useNewUrlParser: true});
 
