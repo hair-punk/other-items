@@ -18,3 +18,15 @@ The Module contains 15 items, and each item corresponds of the following:
     * Use the ``` npm start ``` script to start the server
 
 4. Open your browser on localhost: 3003
+
+
+
+CRUD API
+
+ * GET /items => Retrieves the items from database for the 'You may also like' module
+
+ ??- Post /items
+
+ ??- Put /items
+
+ ??- Delete /items
