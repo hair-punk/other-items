@@ -4,13 +4,13 @@ const S3 = require('aws-sdk/clients/s3');
 const credentials = require('../s3_helper.js');
 
 const s3 = new S3({
-  region: 'us-east-1',
+  region: 'us-east-2',
   credentials: {
     accessKeyId: credentials.accessKeyId,
     secretAccessKey: credentials.secretAccessKey
   }
 });
-const Bucket = 'testjvc5546';
+const Bucket = 'etsymoreyoumightlikephotos';
 
 module.exports.start = function(cb) {
   db.Product.deleteMany((err) => {
