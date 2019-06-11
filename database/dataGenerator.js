@@ -23,4 +23,4 @@ const dataGenerator = (numOfRecords) => {
   }
 };
 
-dataGenerator();
+dataGenerator(1e7);

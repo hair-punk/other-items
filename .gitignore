@@ -4,6 +4,7 @@ s3_helper.js
 credentials
 otherItems.zip
 atlasHelper.js
+mockdata.csv
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
