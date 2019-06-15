@@ -7,7 +7,8 @@
     "react-dev": "webpack -d --watch",
     "test": "mocha",
     "start": "node server.js",
-    "seed": "node database/seed.js"
+    "seed": "node database/seed.js",
+    "dataGen": "node database/data/dataGenerator.js"
   },
   "repository": {
     "type": "git",
@@ -27,9 +28,12 @@
     "express": "^4.17.0",
     "mongoose": "^5.5.8",
     "morgan": "^1.9.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "request": "^2.88.0",
+    "sequelize": "^5.8.9",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

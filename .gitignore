@@ -2,6 +2,7 @@ node_modules
 etsy.js
 s3_helper.js
 credentials
+mockdata.csv
 otherItems.zip
 atlasHelper.js
 # Elastic Beanstalk Files
