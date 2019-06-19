@@ -1,7 +1,9 @@
+require('newrelic');
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const db = require('./database/index.js');
+const db = require('./database/postgresqlDB.js');
+
 
 var app = express();
 var port = process.env.PORT || 3003;
@@ -15,11 +17,17 @@ app.use(morgan('tiny'));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+
+/******------------------------*******/
 app.get('/items',(req, res) => {
   db.fetch((err, results) => {
+    console.log(results, 'result data here!!!');
     res.status(200).send(JSON.stringify(results)).end();
+
   });
 });
+/******------------------------*******/
+
 
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!");

@@ -5,6 +5,7 @@ credentials
 mockdata.csv
 otherItems.zip
 atlasHelper.js
+newrelic.js
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
