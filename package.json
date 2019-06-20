@@ -8,7 +8,8 @@
     "test": "mocha",
     "start": "node server.js",
     "seed": "node database/seed.js",
-    "dataGen": "node database/data/dataGenerator.js"
+    "dataGen": "node database/data/dataGenerator.js",
+    "k6": "k6 run k6test.js"
   },
   "repository": {
     "type": "git",

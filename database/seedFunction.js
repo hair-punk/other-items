@@ -1,5 +1,5 @@
 const faker = require('faker');
-const db = require('./index.js');
+const db = require('./index.js/index.js');
 const S3 = require('aws-sdk/clients/s3');
 const credentials = require('../s3_helper.js');
 

@@ -6,6 +6,8 @@ mockdata.csv
 otherItems.zip
 atlasHelper.js
 newrelic.js
+newrelic_agent.log
+connection.js
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

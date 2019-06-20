@@ -19,13 +19,7 @@ app.use(express.static('public'));
 
 
 /******------------------------*******/
-app.get('/items',(req, res) => {
-  db.fetch((err, results) => {
-    console.log(results, 'result data here!!!');
-    res.status(200).send(JSON.stringify(results)).end();
-
-  });
-});
+app.get('/items', db.fetch);
 /******------------------------*******/
 
 
