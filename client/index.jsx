@@ -6,55 +6,6 @@ import axios from 'axios';
 const host = location.hostname || 'localhost';
 // const port = process.env.PORT || 3003;
 
-const otherItemsStyle = {
-  fontFamily: "Graphik Webfont,-apple-system,BlinkMacSystemFont,Roboto,Droid Sans,Segoe UI,Helvetica,Arial,sans-serif"
-};
-
-const jjcTitleStyle = {
-  color: '#212121',
-  textAlign: 'center',
-  paddingTop: '30px',
-  fontSize: '20px',
-  fontWeight: 'bold'
-};
-
-const jjcButtonContainerStyle = {
-  marginBottom: '36px',
-  textAlign: 'center',
-  boxSizing: 'border-box'
-};
-
-const jjcButtonStyle = {
-  backgroundColor: '#222222',
-  borderColor: '#e6e6e6',
-  color: '#FFF',
-  borderRadius: '3px',
-  borderStyle: 'solid',
-  borderWidth: '1px',
-  display: 'inline-block',
-  fontFamily: 'inherit',
-  fontSize: '14px',
-  fontWeight: 'bold',
-  height: '38px',
-  'lineHeight': '1.4',
-  padding: '8px 12px'
-};
-
-const jjcButtonHoverStyle = {
-  backgroundColor: '#3c3c3c',
-  borderColor: '#e6e6e6',
-  color: '#FFF',
-  borderRadius: '3px',
-  borderStyle: 'solid',
-  borderWidth: '1px',
-  display: 'inline-block',
-  fontFamily: 'inherit',
-  fontSize: '14px',
-  fontWeight: 'bold',
-  height: '38px',
-  'lineHeight': '1.4',
-  padding: '8px 12px'
-};
 
 class App extends React.Component {
   constructor(props) {
@@ -136,3 +87,55 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('jjc-app'));
+
+
+
+const otherItemsStyle = {
+  fontFamily: "Graphik Webfont,-apple-system,BlinkMacSystemFont,Roboto,Droid Sans,Segoe UI,Helvetica,Arial,sans-serif"
+};
+
+const jjcTitleStyle = {
+  color: '#212121',
+  textAlign: 'center',
+  paddingTop: '30px',
+  fontSize: '20px',
+  fontWeight: 'bold'
+};
+
+const jjcButtonContainerStyle = {
+  marginBottom: '36px',
+  textAlign: 'center',
+  boxSizing: 'border-box'
+};
+
+const jjcButtonStyle = {
+  backgroundColor: '#222222',
+  borderColor: '#e6e6e6',
+  color: '#FFF',
+  borderRadius: '3px',
+  borderStyle: 'solid',
+  borderWidth: '1px',
+  display: 'inline-block',
+  fontFamily: 'inherit',
+  fontSize: '14px',
+  fontWeight: 'bold',
+  height: '38px',
+  'lineHeight': '1.4',
+  padding: '8px 12px'
+};
+
+const jjcButtonHoverStyle = {
+  backgroundColor: '#3c3c3c',
+  borderColor: '#e6e6e6',
+  color: '#FFF',
+  borderRadius: '3px',
+  borderStyle: 'solid',
+  borderWidth: '1px',
+  display: 'inline-block',
+  fontFamily: 'inherit',
+  fontSize: '14px',
+  fontWeight: 'bold',
+  height: '38px',
+  'lineHeight': '1.4',
+  padding: '8px 12px'
+};
