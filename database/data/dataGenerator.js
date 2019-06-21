@@ -1,9 +1,8 @@
 const faker = require('faker');
 const fs = require('fs');
 
-
 const dataGenerator = async (numOfRecords) => {
-  const writeStream = fs.createWriteStream(__dirname + '/mockdata.csv', {flag: 'w', defaultEncoding: 'utf8'});
+  const writeStream = fs.createWriteStream(__dirname + '/mockdata2.csv', {flag: 'w', defaultEncoding: 'utf8'});
 
   for (var i = 1; i < numOfRecords; i++) {
     let id = i;
@@ -24,4 +23,4 @@ const dataGenerator = async (numOfRecords) => {
 };
 
 
-dataGenerator(10000001);
+dataGenerator(2500001);
